@@ -1,0 +1,149 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.tvdisplay-backimg{
+    height: 250vh;
+     background-size: 100% 110vh;
+    position: sticky;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.5);
+}
+.background-overlay{
+    background-color: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 250vh;
+}
+.tvdisplay-details{
+    color: white;
+    text-shadow:  1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 120vh;
+    display: flex;
+}
+.tvdisplay-pos img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,5), 0 6px 20px 0 rgba(0, 0, 0, 5);
+
+    width: 300px;
+    height: 400px;
+    position: sticky;
+}
+
+.tvdisplay-info{
+    margin-left: 30px;
+}
+.tv-head{
+    font-size: 70px;
+    font-weight: 600;
+}
+.tv-name{
+    color: yellow;
+    font-size: 30px;
+}
+.tv-cast{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 25px;
+}
+.tv-cast-list img{
+    width: 140px;
+    height: 190px;
+}
+.season img{
+    width: 140px;
+    height: 190px; 
+}
+.tvdiaplay-genre{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+.tv-genre{
+    padding: 5px 5px 5px 5px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+
+}
+.tvdisplay-season{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+.span{
+    font-size: 20px;
+}
+.tv-value{
+    font-size: 20px;
+}
+
+@media screen and (max-width:412px){
+    .fixed-top{
+        background-color: black;
+    }
+    .fixed-top input{
+        width: 200px;
+    }
+   
+ 
+    .tvdisplay-backimg {
+       background-size: 0;
+       background-color: white;
+       width: 300px;
+    }
+    .tvdisplay-details{
+        display: block;
+        margin-left: 25px;
+        text-shadow: none;
+        color: black;
+        width: 100%;
+    }
+    .tvdisplay-pos img{
+        width: 300px;
+        height: 350px;
+    }
+    .tvdisplay-info{
+        margin-left: 6px;
+        /* width: 20%; */
+    }
+    .tv-head{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .tv-name{
+        color: yellow;
+        font-size: 20px;
+    }
+    .tv-value{
+        font-size: 15px;
+    }
+    .tvdiaplay-genre{
+        display: block;
+        gap: 10px;
+        font-size: 20px;
+    }
+    .tv-cast{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+    .background-overlay{
+        background-color: white;
+        
+    }
+    .tv-display-main{
+        width: 200px;
+    }
+    .tvdisplay-season{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+    .d-flex button{
+        margin-left: -10px;
+    }
+   
+}

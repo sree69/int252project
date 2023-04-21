@@ -1,0 +1,315 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.tmdb-title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+}
+.tmdb-overview{
+    /* margin-top: 10px; */
+    font-size: 15px;
+}
+.tmdb-genre{
+  
+    padding: 5px 5px 5px 5px;
+    margin-left: 2px;
+   
+    border: 1px solid white;
+    border-radius: 10px ;
+}
+.yellow , .tmdb-yell{
+    margin-top: 5px;
+    color: yellow;
+}
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  .watch{
+    margin-top: 30px;
+  }
+
+ .display{
+    display: block;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+.display-back{
+    
+    position: relative;
+}
+
+.display-back img {
+padding: 20px 30px 20px 30px;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+}
+
+.info-dp{
+  
+
+      position: relative;
+      display: flex;
+}
+.dp{
+    /* background-color: aqua; */
+    width: 40%;
+
+}
+.dp img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,5), 0 6px 20px 0 rgba(0, 0, 0, 5);
+    width: 300px;
+    border-radius: 10px;
+    height: 400px;
+    margin-top: -100px;
+    margin-left: 40vh;
+    position: relative;
+}
+.info{
+ 
+    /* background-color: bisque; */
+    width: 60%;
+    height: 170vh;
+    
+  
+}
+.tmdb-title{
+  margin-top: 50px;
+}
+
+
+.tmdb-overview{
+  /* background-color: aqua; */
+  width: 100vh;
+}
+
+
+.tmdb-cast{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 25px;
+  /* width: 100px; */
+  /* background-color: aqua; */
+
+  
+}
+.cast-list{
+  width: 40px;
+  height: 200px;
+  display: inline-block;
+
+}
+.cast-list div{
+  margin-left: -13vh;
+}
+.cast-img img{
+width: 100px;
+height: 130px;
+
+}
+
+
+@media screen and (max-width:1200px) {
+  .display-back img{
+    height: 70vh;
+    width: 140vh;
+  }
+  .dp img{
+    margin-left: 20vh;
+    width: 250px;
+    height: 300px;
+  }
+  .tmdb-overview{
+    width: 70vh;
+}
+.tmdb-cast{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+ 
+}
+.info{
+  height: 200vh;
+}
+}
+@media screen and (max-width:992px) {
+  .display-back img{
+    margin-left: -10px;
+    height: 70vh;
+    width: 125vh;
+  }
+  .dp img{
+    margin-left: 10vh;
+    width: 250px;
+    height: 300px;
+  }
+  .tmdb-overview{
+      width: 40vh;
+  }
+  .tmdb-cast{
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    width: 50vh;
+  }
+  .info{
+    height: 250vh;
+  }
+}
+@media screen and (max-width:768px) {
+  .display-back img{
+    margin-left: -10px;
+    height: 50vh;
+    width: 75vh;
+  }
+  .dp img{
+    margin-left: 10vh;
+    width: 250px;
+    height: 300px;
+  }
+  .tmdb-overview{
+    width: 35vh;
+}
+.info div,button{
+  margin-left: 80px;
+}
+.tmdb-cast{
+  display: grid;
+  grid-template-columns: 1fr 1fr  ;
+  width: 20vh;
+}
+.info{
+  height: 200vh;
+}
+.cast-list div{
+  margin-left: -10vh;
+}
+
+}
+@media screen and (max-width:600px){
+  .display-back {
+    display: none;
+  }
+  .info-dp{
+    display: block
+  }
+  .dp img{
+    margin-top: 10vh;
+  }
+  .tmdb-overview{
+    width: 50vh;
+  }
+  .info{
+    height: 250vh;
+  }
+}
+@media screen and (max-width:560px){
+ .tmdb-genre{
+  display: block;
+ 
+width: 30vh;
+ }
+ 
+  .tmdb-overview{
+    width: 30vh;
+  }
+  .info{
+    height: 302vh;
+  }
+}
+@media screen and (max-width:414px){
+  .dp img{
+  margin-left:8vh;
+  /* border: 1px solid white; */
+  }
+  .info{
+    margin-left: -1vh;
+  }
+  .info{
+    height: 290vh;
+  }
+}
+
+@media screen and (max-width:395px){
+ 
+  .info{
+    height: 310vh;
+  }
+}
+@media screen and (max-width:380px){
+ 
+  .info{
+    height: 350vh;
+  }
+}
+
+
+
+
+
+
+
+
+  
+
